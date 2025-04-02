@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Attractions in Egypt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Add Font Awesome for better icons -->
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo"><span class="hieroglyph">𓂀</span> Egypt Tourism</a>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="./attractions.html">Attractions</a></li>
+            <li><a href="index.html#destinations">Destinations</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="search-container">
+            <button class="search-icon" onclick="toggleSearchBar()">
+                <i class="fas fa-search"></i>
+            </button>
+            <input type="text" id="search-bar" placeholder="Search attractions...">
+        </div>
+    </nav>
+
+    <header id="attractions">
+        <h1>Tourist Attractions in Egypt</h1>
+        <p>Explore the wonders of Egypt</p>
+    </header>
+
+    <section>
+        <h2>Top Attractions</h2>
+        <div class="destinations-container">
+            <div class="destination-card" onclick="openModal(0)">
+                <img src="./assets/images/pyramids giza.jpg" alt="Giza Pyramids">
+                <h3>Giza Pyramids</h3>
+                <p>Visit the last remaining wonder of the ancient world.</p>
+            </div>
+            <div class="destination-card" onclick="openModal(1)">
+                <img src="./assets/images/Luxur Temple.jpg" alt="Luxor Temple">
+                <h3>Luxor Temple</h3>
+                <p>Explore the magnificent temples of ancient Thebes.</p>
+            </div>
+            <div class="destination-card" onclick="openModal(2)">
+                <img src="./assets/images/nile rever.jpg" alt="Nile River">
+                <h3>Nile River</h3>
+                <p>Experience Egypt from its legendary river.</p>
+            </div>
+            <!-- Add more attractions here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Egypt Tourism. All rights reserved.</p>
+    </footer>
+    
+    <!-- Add modal for viewing images -->
+    <div id="modal" class="modal">
+        <div class="close" onclick="closeModal()">X</div>
+        <img id="modal-img" src="" alt="Modal Image">
+        <div class="zoom-percentage">100%</div>
+        <div class="modal-controls">
+            <button class="zoom-btn" onclick="zoomIn()">+</button>
+            <button class="zoom-btn" onclick="zoomOut()">−</button>
+        </div>
+    </div>
+    
+    <!-- Add script reference for menu toggle functionality -->
+    <script src="./JS/script.js"></script>
+</body>
+</html>

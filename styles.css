@@ -63,6 +63,15 @@ nav a:hover {
     position: relative;
     display: flex;
     align-items: center;
+    background: var(--accent-dark);
+    border: 1px solid var(--egyptian-gold);
+    border-radius: 25px;
+    padding: 5px 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-container:hover {
+    box-shadow: 0 0 10px var(--egyptian-gold);
 }
 
 .search-icon {
@@ -72,11 +81,9 @@ nav a:hover {
     color: var(--sand);
     cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
-    padding: 10px; /* Add padding for easier clicking */
-    border-radius: 50%; /* Optional: make the clickable area circular */
 }
 
-.search-icon:hover {
+search-icon:hover {
     transform: scale(1.2);
     color: var(--egyptian-gold);
 }
@@ -84,20 +91,22 @@ nav a:hover {
 #search-bar {
     width: 0;
     opacity: 0;
-    padding: 0.5rem;
-    border: 1px solid var(--egyptian-gold);
-    border-radius: 5px;
+    border: none;
+    border-radius: 25px;
     font-size: 1rem;
     color: var(--text-dark);
-    background-color: var(--papyrus);
+    background-color: transparent;
     transition: width 0.3s ease, opacity 0.3s ease;
-    position: absolute;
-    right: 0;
+    outline: none;
+    pointer-events: none; /* Prevent interaction when not active */
 }
 
 #search-bar.active {
     width: 200px;
     opacity: 1;
+    background-color: var(--papyrus);
+    padding: 0.5rem 1rem;
+    pointer-events: auto; /* Allow interaction when active */
 }
 
 #search-bar:focus {

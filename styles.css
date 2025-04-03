@@ -70,7 +70,7 @@ nav a:hover {
     transition: box-shadow 0.3s ease;
 }
 
-.search-container:hover {
+search-container:hover {
     box-shadow: 0 0 10px var(--egyptian-gold);
 }
 
@@ -484,6 +484,47 @@ footer {
     background: linear-gradient(to right, var(--accent-dark), #715c46);
     border-top: 1px solid var(--egyptian-gold);
     color: var(--sand);
+}
+
+footer .social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+footer .social-icons a {
+    color: var(--sand);
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: var(--egyptian-gold);
+    transform: scale(1.1);
+}
+
+footer .social-icons p {
+    margin-top: 0.5rem;
+    font-size: 0.75rem; /* Reduced font size */
+    color: var(--sand);
+}
+
+footer .social-icons img.custom-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+footer .social-icons img.custom-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
 }
 
 #book-flight {
